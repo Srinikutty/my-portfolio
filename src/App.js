@@ -49,7 +49,93 @@ const experiences = [
   },
 ];
 
-const skills = ['HTML & CSS', 'JavaScript', 'PostgreSQL', 'Flutter', 'Dart', 'Figma'];
+const skills = [
+  {
+    name: 'HTML & CSS',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </svg>
+    ),
+  },
+  {
+    name: 'JavaScript',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <rect x="2" y="2" width="20" height="20" rx="2" />
+        <text x="6" y="18" fontSize="12" fill="white" fontWeight="bold">JS</text>
+      </svg>
+    ),
+  },
+  {
+    name: 'React Js',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="3" />
+        <ellipse cx="12" cy="12" rx="8" ry="5" />
+        <ellipse cx="12" cy="12" rx="8" ry="5" transform="rotate(60 12 12)" />
+        <ellipse cx="12" cy="12" rx="8" ry="5" transform="rotate(120 12 12)" />
+      </svg>
+    ),
+  },
+  {
+    name: 'PostgreSQL',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="8" />
+        <path d="M12 8v8M8 12h8" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Flutter',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <polygon points="12,2 2,22 12,16 22,22" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Dart',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <polygon points="2,2 22,12 2,22 10,12" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Figma',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <circle cx="8" cy="12" r="3" />
+        <circle cx="16" cy="12" r="3" />
+        <circle cx="12" cy="6" r="3" />
+        <circle cx="12" cy="18" r="3" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Git',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <circle cx="18" cy="6" r="2" />
+        <circle cx="6" cy="12" r="2" />
+        <circle cx="18" cy="18" r="2" />
+        <line x1="18" y1="8" x2="18" y2="16" stroke="currentColor" strokeWidth="1" />
+        <line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" strokeWidth="1" />
+      </svg>
+    ),
+  },
+  {
+    name: 'GitHub',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.1 6.8 9.2.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.4-3.4-1.4-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8 0-.6.3-1.1.7-1.4-2.5-.3-5-1.2-5-5.5 0-1.2.4-2.2 1-3-.1-.3-.4-1.2.1-2.5 0 0 .8-.3 2.7 1 .8-.2 1.6-.3 2.4-.3.8 0 1.6.1 2.4.3 1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.2.1 2.5.6.8 1 1.8 1 3 0 4.3-2.5 5.2-5 5.5.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5 3.9-1.1 6.8-4.8 6.8-9.2C22 6.5 17.5 2 12 2z" />
+      </svg>
+    ),
+  },
+];
 
 const projects = [
   {
@@ -62,13 +148,19 @@ const projects = [
     name: 'Portfolio',
     type: 'Frontend Website',
     description:
-      'Designed and developed a responsive personal portfolio using HTML, CSS, and JavaScript to present skills, projects, experience, and contact information.',
+      'Designed and developed a responsive personal portfolio using HTML, CSS, JavaScript, and React Js to present skills, projects, experience, and contact information.',
   },
   {
     name: 'Food Supply Chain For Functional Service System',
     type: 'Application',
     description:
       'Created a food court ordering application where users can browse hotels, select dishes, place orders, and receive delivery or pickup timing updates.',
+  },
+  {
+    name: 'Crackers Online Shopping',
+    type: 'UI/UX Design',
+    description:
+      'Designed a comprehensive desktop e-commerce platform for crackers shopping with interactive prototyping in Figma. Includes product catalog with filtering, shopping cart, checkout flow, payment gateway integration, order tracking, and detailed user interactions with smooth animations and transitions.',
   },
 ];
 
@@ -199,7 +291,10 @@ function App() {
 
           <div className="skills-grid">
             {skills.map((skill) => (
-              <span key={skill}>{skill}</span>
+              <div key={skill.name} className="skill-card">
+                <span className="skill-name">{skill.name}</span>
+                <div className="skill-logo">{skill.icon}</div>
+              </div>
             ))}
           </div>
         </section>
