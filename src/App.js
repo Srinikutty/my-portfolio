@@ -195,6 +195,7 @@ const contactLinks = [
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -204,8 +205,16 @@ function App() {
       `Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\n${formData.get('message')}`
     );
 
-    window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}&su=${subject}&body=${body}`;
+    setShowSuccess(true);
     event.currentTarget.reset();
+
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 3200);
+
+    setTimeout(() => {
+      window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}&su=${subject}&body=${body}`;
+    }, 500);
   };
 
   return (
@@ -361,6 +370,12 @@ function App() {
               Send Message
             </button>
           </form>
+
+          {showSuccess && (
+            <div className="success-toast" role="status" aria-live="polite">
+              Message sent successfully! Opening Gmail...
+            </div>
+          )}
         </section>
       </main>
     </div>
