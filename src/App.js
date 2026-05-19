@@ -256,6 +256,9 @@ function App() {
               <a className="button primary" href="#contact">
                 Contact Me
               </a>
+              <a className="button secondary" href="/Srinivasan.Resume.pdf" download="Srinivasan_Resume.pdf" aria-label="Download resume">
+                Download CV
+              </a>
             </div>
 
           </div>
@@ -343,13 +346,19 @@ function App() {
           <div className="section-heading">
             <p className="eyebrow">Get In Touch</p>
             <h2>Contact Me</h2>
-            <div className="social-links" aria-label="Contact links">
-              {contactLinks.map((link) => (
-                <a key={link.name} href={link.href} target="_blank" rel="noreferrer" aria-label={link.name}>
-                  <span className="social-icon">{link.icon}</span>
-                  <span className="social-name">{link.name}</span>
-                </a>
-              ))}
+            <div className="contact-cta">
+              <div className="social-links" aria-label="Contact links">
+                {contactLinks.map((link) => (
+                  <a key={link.name} href={link.href} target="_blank" rel="noreferrer" aria-label={link.name}>
+                    <span className="social-icon">{link.icon}</span>
+                    <span className="social-name">{link.name}</span>
+                  </a>
+                ))}
+              </div>
+
+              <a className="button secondary download-cv" href="/Srinivasan_Resume.pdf" download>
+                Download My CV
+              </a>
             </div>
           </div>
 
