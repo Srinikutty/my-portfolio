@@ -565,6 +565,10 @@ h3 {
   line-height: 1.7;
 }
 
+.project-card p {
+  font-size: 0.95rem;
+}
+
 .projects-grid {
   display: grid;
   gap: 18px;

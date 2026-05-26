@@ -142,25 +142,31 @@ const projects = [
     name: 'Art of Living - Pathfinder',
     type: 'ETL Migration',
     description:
-      'Migrated data for 15 countries from MySQL to PostgreSQL for CRM integration, including schema mapping, ID mapping, validation, and deployment reconciliation.',
+      'Orchestrated enterprise-scale ETL data migration spanning 15 countries from MySQL to PostgreSQL to enable seamless CRM integration. Architected multi-stage data pipelines leveraging pgloader for automated extraction, transformation, and loading across PSA, Staging, Pre-Production, and Production environments. Executed comprehensive data integrity operations including cleansing, schema mapping, foreign key resolution, ID mapping, and validation checks with detailed logging. Addressed complex data quality challenges and implemented transaction-safe production deployment strategies with automated reconciliation validation.',
   },
   {
     name: 'Portfolio',
     type: 'Frontend Website',
     description:
-      'Designed and developed a responsive personal portfolio using HTML, CSS, JavaScript, and React Js to present skills, projects, experience, and contact information.',
+      'Created a personal portfolio website from scratch using HTML, CSS, JavaScript, and React.js with fully responsive design optimized for desktop, tablet, and mobile devices. Implemented comprehensive sections showcasing professional experience timeline, technical skills with interactive 3D flip animations, educational credentials, featured projects, and integrated contact form. Incorporated advanced CSS animations including fade-up effects, smooth hover transitions, shimmer effects on project cards, and polished micro-interactions. Designed with modern glassmorphism aesthetics, gradient overlays, and smooth scrolling navigation. Deployed with performance optimization and accessibility compliance for professional online presence.',
   },
   {
     name: 'Food Supply Chain For Functional Service System',
     type: 'Application',
     description:
-      'Created a food court ordering application where users can browse hotels, select dishes, place orders, and receive delivery or pickup timing updates.',
+      'Developed a full-featured food court ordering and supply chain management application enabling customers to browse diverse hotel partnerships, explore curated dish collections, place orders, and receive real-time delivery or pickup scheduling updates. Implemented intuitive user interface for order management with dynamic inventory tracking and logistics coordination capabilities. Integrated supply chain workflows to optimize operational efficiency across food vendors and delivery partners.',
   },
   {
     name: 'Crackers Online Shopping',
     type: 'UI/UX Design',
     description:
-      'Designed a comprehensive desktop e-commerce platform for crackers shopping with interactive prototyping in Figma. Includes product catalog with filtering, shopping cart, checkout flow, payment gateway integration, order tracking, and detailed user interactions with smooth animations and transitions.',
+      'Designed and prototyped an enterprise-grade e-commerce platform for seasonal crackers retail with comprehensive user experience flows. Created interactive Figma prototypes featuring advanced product catalog with multi-level filtering and search, secure shopping cart functionality, streamlined checkout process, integrated payment gateway options, and order tracking system. Implemented sophisticated animations, micro-interactions, and visual transitions to enhance user engagement and conversion optimization across the entire customer journey.',
+  },
+  {
+    name: 'Art of Living Course Management - Mobile App',
+    type: 'UI/UX Design',
+    description:
+      'Designed a sophisticated mobile-first application interface in Figma for Art of Living educators to deliver comprehensive wellness and meditation programs. Created specialized course modules with dedicated navigation for Art of Living Part 1, SSY (Sudarshan Kriya Yoga), Intuition Process, Sahaj, and complementary personal development programs. Incorporated advanced features including intelligent course progression management, real-time participant tracking, progress analytics dashboard, integrated meditation timers with ambient features, and rich interactive course content delivery. Optimized UX for mobile accessibility with intuitive navigation patterns and adaptive layouts for enhanced learning experiences.',
   },
 ];
 
